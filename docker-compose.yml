@@ -1,0 +1,9 @@
+version: "3.4"
+services:
+  free-space-api:
+    build: "."
+    restart: unless-stopped
+    ports:
+      - "8454:8454"
+    volumes:
+      - ${PATH_TO_CHECK}:/data
